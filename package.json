@@ -1,9 +1,9 @@
 {
   "name": "portfolio2022",
   "version": "0.1.0",
-  "engines" : {
-    "node" : "16.1",
-    "yarn": "1.2"
+  "engines": {
+    "node": "16.10.0",
+    "yarn": "1.22.17"
   },
   "private": true,
   "dependencies": {
