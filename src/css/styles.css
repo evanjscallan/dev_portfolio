@@ -151,6 +151,10 @@
 		z-index: 2;
 	}
 
+	.hidden{
+		display: none;
+	}
+
 /*INDEX TOP*/
 
 
@@ -227,8 +231,6 @@
 					8px 8px 8px 8px rgba(0,0,0,0.1);
 		}
 
-
-
 /*INDEX BOTTOM*/
 	.index-bottom{
 	height: 5vh;
@@ -241,18 +243,18 @@
 		box-sizing: border-box;
 	}
 
-
 	.work-bottom-l{
 		height: 50%;
 		width: 50vw;
+		left: 0;
 		position: absolute;
-		background-color: black;
-		filter: brightness(50%);
-		transition: transform 1s;
+		background-color: #685D79;
+		filter: brightness(100%);
+		transition: transform 1s ease, filter 1s ease;
 	}
 
-	.work-top-l:hover{
-		filter: brightness(100%);
+	.work-bottom-l:hover{
+		filter: brightness(40%);
 	}
 
 
@@ -261,13 +263,15 @@
 		width: 50vw;
 		right: 0;
 		position: absolute;
-		background-color: black;
-		filter: brightness(50%);
-		transition: transform 1s;
+		background-color: #D8737F;
+		filter: brightness(100%);
+		transition: transform 1s ease, filter 1s ease;
 	}
 
+
+
 	.work-bottom-r:hover{
-		filter: brightness(100%);
+		filter: brightness(40%);
 	}
 
 
@@ -276,13 +280,14 @@
 		width: 50vw;
 		left: 0;
 		position: absolute;
-		background-color: black;
-		filter: brightness(50%);
-		transition: transform 1s;
+		background-color: #FCBB6D;
+		filter: brightness(100%);
+		transition: transform 1s ease, filter 1s ease;
 	}
 
+
 	.work-top-l:hover{
-		filter: brightness(100%);
+		filter: brightness(40%);
 	}
 
 	.work-top-r{
@@ -290,29 +295,29 @@
 		width: 50vw;
 		right: 0;
 		position: absolute;
-		background-color: black;
-		filter: brightness(50%);
-		transition: transform 1s ease;
+		background-color: #C8E0FA;
+		filter: brightness(100%);
+		transition: transform 1s ease, filter 1s ease;
 	}
 
 	.work-top-r:hover{
-		filter: brightness(100%);
+		filter: brightness(40%);
 	}
+
+	
 
 
 	.work-background-image{
-		height: auto;
+		height: 100%;
 		overflow: hidden;
 		max-height: 50vh;
-		width: 50vw;
-		filter: brightness(50%);
-		position: absolute;
-		z-index: -1;
+		max-width: 50vw;
 	
 	}
 
-
-
+	.work-background-image img{
+		height: 50vh;
+	}
 
 
 	.back{
@@ -337,9 +342,7 @@
 	}
 
 	.opacity-out{
-
 		transition: opacity 1s ease;
-
 	}
 
 	.about-top{
@@ -370,17 +373,21 @@
 	}
 
 	.about-img{
-		margin: 2em;
+		margin: .5em;
 		max-width: 12rem;
 		
 		justify-self: center;
+	}
+
+	.intangibles{
+		margin: 0 1em 0 1em;
+		text-align: center;
 	}
 
 /*CONTACT*/
 	
 
 	.contact-icon{
-		
 		background-color: white;
 		border-radius: 50%;
 		padding: 20px;
@@ -399,7 +406,7 @@
 
 
 	.contact-outer{
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: #545151;
 		color: white;
 		height: 100vh;
 		width: 100vw;
@@ -417,11 +424,25 @@
 
 	}
 
+	.contact-outer h1{
+		top: 0;
+		margin-top: 2em;
+		position: absolute;
+		opacity: 100
+	}
+
+
+	.contact-outer-none h1{
+		top: 0;
+		margin-top: 2em;
+		position: absolute;
+	}
+
 
 
 
 	.contact-outer-none{
-		background-color: rgba(84, 81, 81, 0.4);
+		background-color: #545151;
 		color: white;
 		height: 100vh;
 		width: 100vw;
@@ -543,29 +564,63 @@
 		transition: transform 1s;
 	}
 
-/*SKILLS*////
+/*SKILLS*/
+	
+	.handle-button{
+		background-color: grey;
+		border-radius: 50%;
+		position: relative;
+		bottom: 18px;
+		margin: 0;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2),
+					2px 2px 2px 2px rgba(0,0,0,0.2),
+					-2px 4px 4px 4px rgba(0,0,0,0.2);
+			
+	}
+
+	.handle-button:hover{
+		color: black;
+	}
+
+
+	.skills-text{
+		position: relative;
+		margin: 0;
+		bottom: 10px;
+		font-size: .9em;
+	}
+
+
+
+
+
 
 	.skills-page{
 		position: absolute;
 		height: 110vh;
 		width: 100vw;
-		top: -10vh;
+		
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		
 		align-items: center;
 		text-align: center;
 
 	}
 
-	.skills-page h2{
+	.skills-list p{
+		font-size: .8em;
+	}
+
+	.skills-list h2{
 		margin: 10px;
 		text-align: center;
-		font-size: 1.0em;
+		font-size: .8em;
 	}
 
 
 	.handle{
+		border-top: 2px solid white;
 		position: absolute;
 		background-color: black;
 		color: white;
@@ -580,14 +635,9 @@
 	.skills-list{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
 		height: 80vh;
 		width: 100vw;
 
-	}
-
-	.skills-list span{
-		color: white;
 	}
 
 	.list-ind{
@@ -597,21 +647,25 @@
 		justify-content: flex-start;	
 		text-align: left;
 		width: 80%;
+		color: white;
+	}
 
+	.list-ind:hover{
+		color: red;
 	}
 
 	
 	.skill-bar-outer{
 		background-color: #7BA6A1;
-		height: 20px;
+		height: 10px;
 		width: 100%;
-		font-size: 10px;
+		font-size: .8em;
 		box-sizing: border-box;
 		
 	}
 
 	.skill-bar-inner{
-		height: 20px;
+		height: 10px;
 		color: black;
 		position: relative;
 		background-color: #CD5A57;

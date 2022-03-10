@@ -3,6 +3,13 @@ import React from "react";
 import Button from "./Button";
 import "./../css/styles.css";
 
+
+import { GiMagicBroom } from 'react-icons/gi'
+import { MdPhoneInTalk } from 'react-icons/md'
+import { FaTools } from 'react-icons/fa'
+import { BsChevronExpand } from 'react-icons/bs'
+import { IconContext } from 'react-icons'
+
 import aboutImg from "./../img/ejs-transparent.png";
 import snekImg from "./../img/8bitskills/python.gif";
 import reactImg from "./../img/8bitskills/react.gif";
@@ -46,18 +53,27 @@ export default class About extends React.Component {
 					/>
 					<div className="about-p flex-ctr-col prim">
 						<p>
-							City assault tower urban silent youtube disposable
-							franchise. Face forwards singularity geodesic
-							sensory post-render-farm knife rifle tanto concrete
-							apophenia tube-ware BASE jump. Free-market wonton
-							soup systema semiotics.
+							I'm a full-stack developer, musician, avid hiker,
+							and photographer based out of Dallas, TX. My goal
+							is to cultivate seamless applications through practical
+							and creative coding. I also enjoy long walks on beaches,
+							cats, and getting frustrated on Stack Overload.
 						</p>
-						<p>
-							Kowloon math-tanto computer. Market pistol Legba
-							narrative skyscraper grenade physical bicycle tower
-							katana chrome denim military-grade. Sensory advert
-							chrome marketing uplink man tower.
-						</p>
+						
+						<span class='row'>
+						<div>
+						<GiMagicBroom  size='3em'/>
+						<p className='intangibles'>Clean codebase</p>
+						</div>
+						<div>
+						<FaTools size='3em'/>
+						<p className='intangibles'>Modular architecture</p>
+						</div>
+						<div>
+						<MdPhoneInTalk  size='3em'/>
+						<p className='intangibles'>Efficient relay</p>
+						</div>
+						</span>
 					</div>
 				</div>
 				<div className="about-bottom">
@@ -71,9 +87,16 @@ export default class About extends React.Component {
 						onDrag={this.handleDrag}
 						onStop={this.handleStop}
 					>
+
+
 						<div className="handle">
 							<div className="skills-page">
-								<h2 className="prim">SKILLS (CLICK + DRAG)</h2>
+								<IconContext.Provider value={{ color: "white", size: '2em', className: 'handle-button' }}>
+								<BsChevronExpand/>
+								</IconContext.Provider>
+								<h2 className="skills-text prim">SKILLS</h2>
+							
+
 								<ul className="skills-list">
 									<span className="list-ind">
 										<p>Javascript</p>

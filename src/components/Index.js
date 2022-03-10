@@ -61,7 +61,7 @@ export default class Index extends React.Component {
 				className={setAboutVisible ? "index-outer" : 'index-outer-none'}>
 				<Work backBtn={this.handleClick.bind(this)} workState={setWorkVisible}/>
 				
-					<span className="index-top">
+					<span className={setContactVisible ? "hidden" : "index-top"}>
 						<span className="nav-container-l">
 							<a onClick={(e) => this.handleClick()}>WORK</a>
 						</span>
@@ -71,7 +71,7 @@ export default class Index extends React.Component {
 						</span>
 					</span>
 
-					<div className="index-middle">
+					<div className={setContactVisible ? "hidden" : "index-middle"}>
 						<h1 className="font-primary title-text ">
 							Evan Scallan is a web developer who makes
 							smooth-running, responsive web applications.

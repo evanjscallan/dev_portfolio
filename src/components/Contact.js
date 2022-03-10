@@ -18,8 +18,8 @@ export default function Contact(props, contactState){
 
 		return(	
 		<React.Fragment>
-			<div className={props.contactState ? 'contact-outer' : 'contact-outer-none'}>	
-			
+			<div className={setContactVisible ? 'contact-outer' : 'contact-outer-none'}>	
+			<h1>Let's get in touch.</h1>
 			<div  onClick={backBtn} className='menu-container'><AiOutlineCloseCircle/></div>
 			<div className='cir-menu'>
 				<span ref={targetRef} className={props.contactState ? 'cir-a': 'cir-a-min'}>
