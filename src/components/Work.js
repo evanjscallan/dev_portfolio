@@ -19,9 +19,9 @@ export default function Work(props, styles) {
 	const backBtn = props.backBtn;
 	return (
 		<React.Fragment>
-			<div className="work-outer">
+			
 
-				<div className="work-bottom-l work-pad flex-ctr-col"
+				<div className="work-bottom-l"
 						style={
 						setWorkVisible
 							? { transform: `translateY(${200}%)` }
@@ -35,12 +35,12 @@ export default function Work(props, styles) {
 					</div>
 				</div>
 
-				<div className="work-bottom-r work-pad flex-ctr-col"
+				<div className="work-bottom-r"
 						style={
 						setWorkVisible
 							? { transform: `translateY(${200}%)` }
 							: { transform: `translateY(${100}%)` }}>
-					<div className="flex-ctr-col">
+					<div className="flex-ctr-col" >
 						<WorkInfo
 							bgImage={orcaImg}
 							title="Orcahome"
@@ -50,7 +50,7 @@ export default function Work(props, styles) {
 				</div>
 
 
-				<div className="work-top-l work-pad flex-ctr-col"
+				<div className="work-top-l"
 						style={
 						setWorkVisible
 							? { transform: `translateY(${-100}%)` }
@@ -58,13 +58,13 @@ export default function Work(props, styles) {
 					<div className="flex-ctr-col">
 						<WorkInfo
 							bgImage={battleImg}
-							title="The Emissary"
-							description="Language translator with a retro twist. Deployed on Heroku."
+							title="Github Battle"
+							description="It's Battle time. Utilizing React and Github API to compare user data in the form of a game."
 							bgAltText="Application mockup on devices for github battle"/>
 					</div>
 				</div>
 
-				<div className="work-top-r work-pad flex-ctr-col"
+				<div className="work-top-r"
 						style={
 						setWorkVisible
 							? { transform: `translateY(${-100}%)` }
@@ -80,7 +80,7 @@ export default function Work(props, styles) {
 				</div>
 
 
-			</div>
+		
 		</React.Fragment>
 	);
 }
