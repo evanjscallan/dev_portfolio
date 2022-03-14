@@ -1,6 +1,6 @@
 /*FONTS*/
 	.font-primary{
-		font-size: 1.5em;
+		font-size: 4vh;
 		font-family: AppleGothic;
 		font-weight: 500;
 	}
@@ -66,6 +66,13 @@
 	.column{
 		display: flex;
 		flex-direction: column;
+	}
+
+	.ctr-row{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.flex-ctr-col{
@@ -163,13 +170,15 @@
 		width: 100%;
 		margin: 0;
 		top: 0;
+		padding-top: .5em;
 		display: flex;
 		flex-direction: row;
 		overflow: hidden;
+		font-size: 3vh;
 	}
 
 	.nav-container-l{
-		padding: 0 1em 0 2em;
+		
 		width: 50%;
 		height: inherit;
 		display: flex;
@@ -184,15 +193,20 @@
 		flex-direction: row;
 		justify-content: flex-end;
 		align-items: center;
-		padding: 0 1em 0 1em;
 		height: inherit;
 		width: 50%;
 	}
+	.nav-container-l a{
+		padding: 0 1em 0 1em;
 
-	.nav-container-r a{
-		padding: 0 .5em 0 .5em;
-	
 	}
+		.nav-container-r a{
+			
+		
+			margin: 0 .5em 0 1em;
+		}
+	
+	
 
 /*INDEX MIDDLE*/
 	.index-middle{
@@ -208,6 +222,7 @@
 	.learn-more{
 		background-color: #F4ECDD;
 		color: #535350;
+		font-size: 2vh;
 		padding: .5em 2em .5em 2em;
 		transition: background-color .5s ease, color .5s ease;
 	}
@@ -218,10 +233,9 @@
 		transition:  background-color .5s ease, color .5s ease;
 	}
 
-	.index-img{
-		
+	.index-img{	
 		margin: 2em;
-		max-width: 12rem;
+		height: 40vh;
 		background-color: #AEBFB9;
 		justify-self: center;
 		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1),
@@ -302,6 +316,7 @@
 	.work-text{
 		opacity: 0;
 		height: 50vh;
+		font-size: 2vh;
 		top: 0;
 		position: absolute;
 		width: 100%;
@@ -358,9 +373,9 @@
 		position: fixed;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-around;
 		overflow: hidden;
 		margin: 0;
-		
 		z-index: -2;
 	}
 
@@ -371,41 +386,53 @@
 	.about-top{
 		height: 5vh;
 		width: 100%;
-		margin: 0;
 		top: 0;
 		display: flex;
 		flex-direction: row;
-		overflow: hidden;		
+		overflow: hidden;
+		font-size: 2.5vh;		
 
+	}
+
+	.about-top p{
+		margin-right: 1em;
 	}
 
 	.about-middle{
 		height: 90vh;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: space-around;
 		align-items: center;
-		overflow: hidden;
+		box-sizing: border-box;
+		padding: 4em 6em 4em 6em;
 	}
 
 
 
 	.about-p{
 		text-align: center;
-		width: 70%;
+		font-size: 2vh;
+		margin: -4em 10% 1em 10%;
 	}
 
 	.about-img{
-		margin: .5em;
-		max-width: 12rem;
+		margin: -3em 0em 0 0em;
+		max-height: 47vh;
+		max-width: 80vw;
 		
-		justify-self: center;
+		justify-self: flex-start;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1),
+			2px 2px 2px 2px rgba(0,0,0,0.1),
+			4px 4px 4px 4px rgba(0,0,0,0.1),
+			8px 8px 8px 8px rgba(0,0,0,0.1);
 	}
 
 	.intangibles{
-		margin: 0 1em 0 1em;
+		margin: 0em 1em .5em 1em;
 		text-align: center;
 	}
+
 
 /*CONTACT*/
 	

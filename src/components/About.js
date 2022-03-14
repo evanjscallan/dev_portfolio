@@ -5,12 +5,12 @@ import "./../css/styles.css";
 
 
 import { GiMagicBroom } from 'react-icons/gi'
-import { MdPhoneInTalk } from 'react-icons/md'
+import { MdPhoneInTalk, MdDashboardCustomize } from 'react-icons/md'
 import { FaTools } from 'react-icons/fa'
 import { BsChevronExpand } from 'react-icons/bs'
 import { IconContext } from 'react-icons'
 
-import aboutImg from "./../img/ejs-transparent.png";
+import aboutImg from "./../img/about_profile_wide.jpg";
 import snekImg from "./../img/8bitskills/python.gif";
 import reactImg from "./../img/8bitskills/react.gif";
 import javascriptImg from "./../img/8bitskills/javascript.gif";
@@ -51,7 +51,7 @@ export default class About extends React.Component {
 						src={aboutImg}
 						alt="Evan playing piano in an 8-bit universe."
 					/>
-					<div className="about-p flex-ctr-col prim">
+					<div className=" flex-col-ctr about-p prim">
 						<p>
 							I'm a full-stack developer, musician, avid hiker,
 							and photographer based out of Dallas, TX. My goal
@@ -60,18 +60,24 @@ export default class About extends React.Component {
 							cats, and getting frustrated on Stack Overload.
 						</p>
 						
-						<span class='row'>
+						<span className='ctr-row'>
 						<div>
-						<GiMagicBroom  size='3em'/>
+						<div className='intang-icon'>
+						<GiMagicBroom  size='5em'/>
 						<p className='intangibles'>Clean codebase</p>
 						</div>
-						<div>
-						<FaTools size='3em'/>
-						<p className='intangibles'>Modular architecture</p>
 						</div>
 						<div>
-						<MdPhoneInTalk  size='3em'/>
+						<div className='intang-icon'>
+						<MdDashboardCustomize size='5em'/>
+						<p className='intangibles'>Modular architecture</p>
+						</div>
+						</div>
+						<div>
+						<div className='intang-icon'>
+						<MdPhoneInTalk  size='5em'/>
 						<p className='intangibles'>Efficient relay</p>
+						</div>
 						</div>
 						</span>
 					</div>

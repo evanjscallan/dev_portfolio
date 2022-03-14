@@ -1,13 +1,14 @@
 import React from 'react'
+import "./../css/styles.css";
 
 
 const Button = (props) => {
 	return (
-		<span 
+		<div 
 		onClick={props.click} 
 		className="learn-more">
 		{props.text}
-		</span>
+		</div>
 		)
 }
 
